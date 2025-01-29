@@ -57,8 +57,8 @@ I can resolve this with a simple logic, forcing to add the new column (if matche
 
 ![image](https://github.com/user-attachments/assets/5d75d9be-e386-42d1-a294-de533d77f88a)
 
-iif(isNull(toString({GDP per capita, PPP (constant 2017 international $)})), '', toString({GDP per capita, PPP (constant 2017 international $)}))
-iif(isNull(toString({Сontinent})), '', toString({Сontinent}))
+ ``` iif(isNull(toString({GDP per capita, PPP (constant 2017 international $)})), '', toString({GDP per capita, PPP (constant 2017 international $)}))  ``` 
+ ``` iif(isNull(toString({Сontinent})), '', toString({Сontinent}))  ``` 
 
 ![image](https://github.com/user-attachments/assets/af7dace4-a1d4-4fe8-9672-fa1838d26244)
 
