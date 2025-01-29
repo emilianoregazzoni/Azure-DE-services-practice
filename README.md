@@ -64,13 +64,31 @@ iif(isNull(toString({Сontinent})), '', toString({Сontinent}))
 
 With this logic, I can ensure that the fields will be String and if a cell is null, will be empty. So all records will have all the columns.
 
-![Uploading image.png…]()
 
 
-3. Azure SQL Database
+
+## 3. Azure SQL Database
 Finally I create a pipeline, with the transformation logic inside, taking the transformation as a source and setting the Azure SQL database previosuly configurated as a destination.
+
+![image](https://github.com/user-attachments/assets/060f6104-2ea7-4ffe-b18f-86c62dd7f954)
+
 It is a good practice to set up variables at te level of Azure SQL configuration. I created 2 variables, one related to schema and other related to table, so I can specifiy the name of both at the pipeline.
+
+![image](https://github.com/user-attachments/assets/30cd6b06-a14e-4422-bbc7-5f37c3ee044f)
+
 It is important to check the "Auto create table", so the pipeline can create it in the database.
+
+![image](https://github.com/user-attachments/assets/16344178-04e0-442d-9b31-f59237872bff)
+
 19 seconds took to ADF to persist the 10 thousands records into Azure SQL database.
+
+![image](https://github.com/user-attachments/assets/a92c7158-5bd6-4f56-befd-2538c811488d)
+
 Finally I can see the information in the database:
+
+![image](https://github.com/user-attachments/assets/e198aa3d-738c-4bd2-9827-12e49acf783a)
+
 For this practice I created all the resources in US-East 2, I spent a total of 0.65 USD, considering all the tests I made.
+
+![image](https://github.com/user-attachments/assets/4c4cc31b-428c-4d2d-bed2-ee6c7db24d05)
+
