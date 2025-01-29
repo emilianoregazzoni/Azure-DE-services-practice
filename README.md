@@ -3,6 +3,7 @@
 ![image](https://github.com/user-attachments/assets/5cb6029d-1c40-4bb5-8b2a-dcbb16220e92)
 
 In this small I decided to explore some DE services in Azure, I will be working with a small dataset provided by Scibearia on Kaggle: https://www.kaggle.com/datasets/scibearia/meat-consumption-per-capita.
+
 This dataset has information about the meat consumption per capita. It has 2 files, one contains the information related to the consume of diverse types of meat by country and year. The other one has info related to GDP and some more columns.
 The goal here is to use Azure data factory, similar to AWS Glue, to do some transformations, and then, persist all information in an Azure SQL database. Creating a simple pipeline.
 
@@ -58,6 +59,7 @@ I can resolve this with a simple logic, forcing to add the new column (if matche
 ![image](https://github.com/user-attachments/assets/5d75d9be-e386-42d1-a294-de533d77f88a)
 
  ``` iif(isNull(toString({GDP per capita, PPP (constant 2017 international $)})), '', toString({GDP per capita, PPP (constant 2017 international $)}))  ``` 
+ 
  ``` iif(isNull(toString({Сontinent})), '', toString({Сontinent}))  ``` 
 
 ![image](https://github.com/user-attachments/assets/af7dace4-a1d4-4fe8-9672-fa1838d26244)
